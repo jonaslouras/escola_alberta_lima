@@ -11,7 +11,7 @@ const Hero: React.FC<HeroProps> = ({ scrollToSection }) => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://picsum.photos/id/453/1920/1080" 
+          src="/images/avo.jpg" 
           alt="Musician playing piano" 
           className="w-full h-full object-cover"
         />
