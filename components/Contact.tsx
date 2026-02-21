@@ -123,6 +123,29 @@ const Contact: React.FC = () => {
                 </div>
               </div>
             </div>
+
+            {/* Google Maps Embed */}
+            <div className="mt-10 rounded-xl overflow-hidden shadow-lg border-2 border-white/10">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3003.5!2d-8.6906!3d41.1841!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2464e517d75a6d%3A0x4a9c4f85c3b98d1b!2sEscola+de+M%C3%BAsica+e+Bailado+Alberta+Lima!5e0!3m2!1spt-PT!2spt"
+                width="100%"
+                height="220"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Localização Escola Alberta Lima no Google Maps"
+              ></iframe>
+            </div>
+            <a
+              href="https://maps.app.goo.gl/L3FMurUMotxUJm319"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-flex items-center gap-2 text-brand-gold hover:text-white transition-colors text-sm font-bold uppercase tracking-wider"
+            >
+              <MapPin className="w-4 h-4" />
+              Abrir no Google Maps →
+            </a>
           </div>
 
           <div className="bg-white text-brand-dark p-8 md:p-10 rounded-2xl shadow-2xl">

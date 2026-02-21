@@ -37,7 +37,7 @@ const Header: React.FC<HeaderProps> = ({ scrollToSection }) => {
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
         <div className="flex items-center gap-2 cursor-pointer" onClick={() => handleNavClick('home')}>
-          <img src="https://image2url.com/r2/default/images/1771644509475-df40bfe6-7191-4efe-ab6f-ce505819205c.blob" alt="Logotipo Escola Alberta Lima" className="w-10 h-10 object-contain" />
+          <img src="/images/logo.png" alt="Logotipo Escola Alberta Lima" className="w-10 h-10 object-contain" />
           <div className="flex flex-col">
             <span className="font-serif text-xl font-bold leading-none">Alberta Lima</span>
             <span className="text-xs tracking-widest uppercase opacity-80">Escola de Música e Bailado</span>

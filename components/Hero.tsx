@@ -40,7 +40,7 @@ const Hero: React.FC<HeroProps> = ({ scrollToSection }) => {
           </button>
           <button
             onClick={() => scrollToSection('about')}
-            className="border border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/10 transition-all duration-300"
+            className="bg-brand-burgundy text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/10 transition-all duration-300"
           >
             A Nossa História
           </button>

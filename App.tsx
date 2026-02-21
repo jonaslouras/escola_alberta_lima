@@ -11,6 +11,7 @@ import FAQ from './components/FAQ';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
 import Partnerships from './components/Partnerships';
 import Environment from './components/Environment';
+import InstagramFeed from './components/InstagramFeed';
 
 const App: React.FC = () => {
   const scrollToSection = (id: string) => {
@@ -33,7 +34,7 @@ const App: React.FC = () => {
         <Partnerships />
         <FAQ />
         <Testimonials />
-        <Environment />
+        <InstagramFeed />
         <Contact />
       </main>
 
