@@ -12,7 +12,7 @@ const About: React.FC = () => {
           <div className="relative">
             <div className="absolute -top-4 -left-4 w-full h-full border-2 border-brand-gold rounded-lg z-0 hidden md:block"></div>
             <img
-              src="/images/alberta lima.jpg"
+              src="https://image2url.com/r2/default/images/1771645555789-650150eb-d278-48eb-be0b-4cf38d1b39a8.blob"
               alt="Alberta Lima"
               className="relative z-10 rounded-lg shadow-2xl w-full h-auto object-cover grayscale hover:grayscale-0 transition-all duration-500"
             />

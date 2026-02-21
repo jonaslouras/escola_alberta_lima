@@ -14,7 +14,7 @@ const teachers = [
   {
     name: "Francisco",
     role: "Piano",
-    image: "/professores/Francisco piano.png"
+    image: "https://image2url.com/r2/default/images/1771645528381-24be7c87-ea27-4173-958b-8d45ca3fcbe3.blob"
   },
   {
     name: "Vitor José",
@@ -24,7 +24,8 @@ const teachers = [
   {
     name: "Pedro Guitas",
     role: "Guitarra Clássica / Elétrica",
-    image: "/professores/pedro guitas.png"
+    image: "https://image2url.com/r2/default/images/1771645535445-5bae4719-4146-44ad-b3dc-4dd6392cc182.blob"
+
   },
   {
     name: "Rogério Monteiro",
