@@ -12,9 +12,9 @@ const teachers = [
     image: "https://image2url.com/r2/default/images/1770327553004-94c006ac-53a7-461e-8551-962dd495c1da.blob"
   },
   {
-    name: "Diogo Ferreira",
+    name: "Francisco",
     role: "Piano",
-    image: "/professores/diogo-ferreira.jpg"
+    image: "/professores/Francisco piano.png"
   },
   {
     name: "Vitor José",
@@ -24,7 +24,7 @@ const teachers = [
   {
     name: "Pedro Guitas",
     role: "Guitarra Clássica / Elétrica",
-    image: "https://image2url.com/r2/default/images/1770327470001-be84f962-2f33-450d-bb11-e6d215455b06.png"
+    image: "/professores/pedro guitas.png"
   },
   {
     name: "Rogério Monteiro",
@@ -40,7 +40,7 @@ const teachers = [
 
 const Team: React.FC = () => {
   return (
-    <section id="team" className="py-20 bg-white">
+    <section id="team" className="py-12 md:py-20 bg-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-brand-burgundy uppercase tracking-widest font-bold mb-4">O Nosso Corpo Docente</h2>
@@ -53,13 +53,13 @@ const Team: React.FC = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {teachers.map((teacher, index) => (
             <div key={index} className="group relative overflow-hidden rounded-xl shadow-lg aspect-[3/4] cursor-pointer">
-              <img 
-                src={teacher.image} 
-                alt={teacher.name} 
+              <img
+                src={teacher.image}
+                alt={teacher.name}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-burgundy/90 via-brand-burgundy/20 to-transparent opacity-80 transition-opacity duration-300"></div>
-              
+
               <div className="absolute bottom-0 left-0 w-full p-6 text-white translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
                 <div className="w-12 h-1 bg-brand-gold mb-3 transition-all duration-300 group-hover:w-20"></div>
                 <h4 className="font-serif text-2xl font-bold mb-1 leading-tight">{teacher.name}</h4>

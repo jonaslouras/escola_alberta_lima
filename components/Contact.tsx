@@ -14,7 +14,7 @@ const Contact: React.FC = () => {
 
   const validateForm = () => {
     const newErrors: { [key: string]: string } = {};
-    
+
     if (!formData.name.trim()) {
       newErrors.name = 'Por favor, introduza o seu nome.';
     }
@@ -48,7 +48,7 @@ const Contact: React.FC = () => {
         subject: 'Informações Gerais',
         message: ''
       });
-      
+
       // Reset success message after 5 seconds
       setTimeout(() => setSubmitStatus('idle'), 5000);
     }
@@ -57,7 +57,7 @@ const Contact: React.FC = () => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
-    
+
     // Clear error when user types
     if (errors[name]) {
       setErrors(prev => {
@@ -69,10 +69,10 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-brand-dark text-white">
+    <section id="contact" className="py-12 md:py-20 bg-brand-dark text-white">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-16">
-          
+
           <div>
             <h2 className="text-brand-gold uppercase tracking-widest font-bold mb-4">Contactos</h2>
             <h3 className="font-serif text-4xl font-bold mb-8">Visite a Nossa Escola</h3>
@@ -87,7 +87,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="font-bold text-lg">Morada</h4>
-                  <p className="text-gray-400">Rua Conselheiro Costa Braga, 124<br/>Matosinhos, Portugal</p>
+                  <p className="text-gray-400">Rua Conselheiro Costa Braga, 124<br />Matosinhos, Portugal</p>
                   <p className="text-brand-gold text-sm mt-1 italic">(Nas instalações da The Future Academy)</p>
                 </div>
               </div>
@@ -127,7 +127,7 @@ const Contact: React.FC = () => {
 
           <div className="bg-white text-brand-dark p-8 md:p-10 rounded-2xl shadow-2xl">
             <h3 className="font-serif text-3xl font-bold mb-6">Envie-nos uma mensagem</h3>
-            
+
             {submitStatus === 'success' && (
               <div className="mb-6 bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded-lg flex items-center gap-2 animate-fade-in-up">
                 <CheckCircle className="w-5 h-5" />
@@ -138,13 +138,13 @@ const Contact: React.FC = () => {
             <form className="space-y-4" onSubmit={handleSubmit} noValidate>
               <div>
                 <label className="block text-sm font-bold mb-2 uppercase tracking-wide">Nome *</label>
-                <input 
-                  type="text" 
+                <input
+                  type="text"
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
                   className={`w-full bg-gray-100 border p-4 rounded-lg focus:ring-2 focus:outline-none transition-colors ${errors.name ? 'border-red-500 focus:ring-red-200' : 'border-transparent focus:ring-brand-burgundy'}`}
-                  placeholder="O seu nome" 
+                  placeholder="O seu nome"
                 />
                 {errors.name && (
                   <div className="flex items-center gap-1 mt-1 text-red-500 text-sm">
@@ -153,16 +153,16 @@ const Contact: React.FC = () => {
                   </div>
                 )}
               </div>
-              
+
               <div>
                 <label className="block text-sm font-bold mb-2 uppercase tracking-wide">Email *</label>
-                <input 
-                  type="email" 
+                <input
+                  type="email"
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
                   className={`w-full bg-gray-100 border p-4 rounded-lg focus:ring-2 focus:outline-none transition-colors ${errors.email ? 'border-red-500 focus:ring-red-200' : 'border-transparent focus:ring-brand-burgundy'}`}
-                  placeholder="O seu email" 
+                  placeholder="O seu email"
                 />
                 {errors.email && (
                   <div className="flex items-center gap-1 mt-1 text-red-500 text-sm">
@@ -174,7 +174,7 @@ const Contact: React.FC = () => {
 
               <div>
                 <label className="block text-sm font-bold mb-2 uppercase tracking-wide">Assunto</label>
-                <select 
+                <select
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
@@ -188,7 +188,7 @@ const Contact: React.FC = () => {
 
               <div>
                 <label className="block text-sm font-bold mb-2 uppercase tracking-wide">Mensagem *</label>
-                <textarea 
+                <textarea
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
@@ -203,7 +203,7 @@ const Contact: React.FC = () => {
                 )}
               </div>
 
-              <button 
+              <button
                 type="submit"
                 className="w-full bg-brand-burgundy text-white font-bold py-4 rounded-lg hover:bg-brand-gold hover:text-brand-dark transition-all duration-300"
               >

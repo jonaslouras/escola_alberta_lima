@@ -16,7 +16,7 @@ const services = [
 
 const Partnerships: React.FC = () => {
   return (
-    <section className="py-20 bg-gray-900 text-white overflow-hidden relative">
+    <section className="py-12 md:py-20 bg-gray-900 text-white overflow-hidden relative">
       {/* Background decoration */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-brand-burgundy/10 rounded-full filter blur-3xl -translate-y-1/2 translate-x-1/2"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-brand-gold/5 rounded-full filter blur-3xl translate-y-1/2 -translate-x-1/2"></div>
@@ -26,15 +26,15 @@ const Partnerships: React.FC = () => {
           <h2 className="text-brand-gold uppercase tracking-widest font-bold mb-4">Parcerias & Instalações</h2>
           <h3 className="font-serif text-4xl md:text-5xl font-bold text-white mb-6">The Future Academy</h3>
           <p className="mt-4 text-gray-400 max-w-2xl mx-auto text-lg">
-            A Escola de Música Alberta Lima tem o privilégio de estar sediada nas instalações da <span className="text-white font-bold">The Future Academy</span>, 
+            A Escola de Música Alberta Lima tem o privilégio de estar sediada nas instalações da <span className="text-white font-bold">The Future Academy</span>,
             um hub criativo que oferece serviços profissionais complementares à formação artística.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {services.map((service, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="bg-white/5 backdrop-blur-sm border border-white/10 p-6 rounded-xl hover:bg-white/10 hover:border-brand-gold/30 transition-all duration-300 group flex flex-col items-center text-center hover:-translate-y-1"
             >
               <div className="w-14 h-14 bg-brand-burgundy/20 rounded-full flex items-center justify-center mb-4 group-hover:bg-brand-gold group-hover:text-brand-dark transition-colors duration-300 text-brand-gold">
@@ -46,9 +46,9 @@ const Partnerships: React.FC = () => {
         </div>
 
         <div className="mt-12 text-center border-t border-white/10 pt-8">
-           <p className="text-sm text-gray-500 italic">
-             * Nota: A The Future Academy é uma entidade independente. A Escola Alberta Lima partilha o espaço e recomenda os seus serviços de excelência.
-           </p>
+          <p className="text-sm text-gray-500 italic">
+            * Nota: A The Future Academy é uma entidade independente. A Escola Alberta Lima partilha o espaço e recomenda os seus serviços de excelência.
+          </p>
         </div>
       </div>
     </section>

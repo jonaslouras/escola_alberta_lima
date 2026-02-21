@@ -52,7 +52,7 @@ const Testimonials: React.FC = () => {
   }, []);
 
   return (
-    <section className="py-20 bg-brand-burgundy text-white relative overflow-hidden">
+    <section className="py-12 md:py-20 bg-brand-burgundy text-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none overflow-hidden">
         <Quote className="w-96 h-96 -translate-x-20 -translate-y-20 transform rotate-12" />
@@ -96,7 +96,7 @@ const Testimonials: React.FC = () => {
             </div>
 
             {/* Navigation Arrows */}
-            <button 
+            <button
               onClick={prev}
               className="absolute left-2 md:-left-12 top-1/2 -translate-y-1/2 p-2 md:p-3 bg-white/10 hover:bg-brand-gold hover:text-brand-dark rounded-full transition-all text-white backdrop-blur-md"
               aria-label="Anterior"
@@ -104,7 +104,7 @@ const Testimonials: React.FC = () => {
               <ChevronLeft className="w-6 h-6" />
             </button>
 
-            <button 
+            <button
               onClick={next}
               className="absolute right-2 md:-right-12 top-1/2 -translate-y-1/2 p-2 md:p-3 bg-white/10 hover:bg-brand-gold hover:text-brand-dark rounded-full transition-all text-white backdrop-blur-md"
               aria-label="Próximo"
@@ -119,9 +119,8 @@ const Testimonials: React.FC = () => {
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
-                className={`h-2 rounded-full transition-all duration-300 ${
-                  index === currentIndex ? 'bg-brand-gold w-8' : 'bg-white/30 w-2 hover:bg-white/50'
-                }`}
+                className={`h-2 rounded-full transition-all duration-300 ${index === currentIndex ? 'bg-brand-gold w-8' : 'bg-white/30 w-2 hover:bg-white/50'
+                  }`}
                 aria-label={`Ir para testemunho ${index + 1}`}
               />
             ))}

@@ -28,7 +28,7 @@ const FAQ: React.FC = () => {
   };
 
   return (
-    <section className="py-20 bg-white border-t border-gray-100">
+    <section className="py-12 md:py-20 bg-white border-t border-gray-100">
       <div className="container mx-auto px-6 max-w-4xl">
         <div className="text-center mb-12">
           <div className="flex justify-center mb-4">
@@ -42,13 +42,12 @@ const FAQ: React.FC = () => {
 
         <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <div 
-              key={index} 
-              className={`border rounded-xl transition-all duration-300 ${
-                openIndex === index 
-                  ? 'border-brand-gold bg-brand-cream/30 shadow-md' 
+            <div
+              key={index}
+              className={`border rounded-xl transition-all duration-300 ${openIndex === index
+                  ? 'border-brand-gold bg-brand-cream/30 shadow-md'
                   : 'border-gray-200 hover:border-brand-gold/50'
-              }`}
+                }`}
             >
               <button
                 className="w-full flex justify-between items-center p-6 text-left focus:outline-none"
@@ -63,11 +62,10 @@ const FAQ: React.FC = () => {
                   <ChevronDown className="w-5 h-5 text-gray-400" />
                 )}
               </button>
-              
-              <div 
-                className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                  openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-                }`}
+
+              <div
+                className={`overflow-hidden transition-all duration-300 ease-in-out ${openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                  }`}
               >
                 <div className="p-6 pt-0 text-gray-600 leading-relaxed">
                   {faq.answer}
