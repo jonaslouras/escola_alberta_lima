@@ -11,7 +11,7 @@ const Hero: React.FC<HeroProps> = ({ scrollToSection }) => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/images/avo.jpg"
+          src="/images/hero.png"
           alt="Interior da Escola de Música Alberta Lima em Matosinhos"
           className="w-full h-full object-cover"
         />
