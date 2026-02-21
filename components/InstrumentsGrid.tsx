@@ -26,11 +26,11 @@ const InstrumentsGrid: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8 justify-items-center">
+        <div className="flex flex-wrap justify-center gap-6 md:gap-8">
           {instruments.map((item, index) => (
             <div
               key={index}
-              className="w-full bg-white p-6 md:p-8 rounded-xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group flex flex-col items-center justify-center text-center border border-gray-100"
+              className="bg-white p-6 md:p-8 rounded-xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group flex flex-col items-center justify-center text-center border border-gray-100 w-[calc(50%-0.75rem)] md:w-[calc(33.333%-1.1rem)] lg:w-[calc(25%-1.5rem)]"
             >
               <div className="w-24 h-24 mb-6 flex items-center justify-center p-5 bg-brand-cream rounded-full group-hover:bg-brand-burgundy/10 transition-colors duration-300">
                 <span className="text-5xl md:text-6xl group-hover:scale-110 transition-transform duration-300 block">

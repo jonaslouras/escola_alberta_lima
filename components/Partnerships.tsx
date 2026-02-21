@@ -31,11 +31,11 @@ const Partnerships: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="flex flex-wrap justify-center gap-6">
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white/5 backdrop-blur-sm border border-white/10 p-6 rounded-xl hover:bg-white/10 hover:border-brand-gold/30 transition-all duration-300 group flex flex-col items-center text-center hover:-translate-y-1"
+              className="bg-white/5 backdrop-blur-sm border border-white/10 p-6 rounded-xl hover:bg-white/10 hover:border-brand-gold/30 transition-all duration-300 group flex flex-col items-center text-center hover:-translate-y-1 w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)]"
             >
               <div className="w-14 h-14 bg-brand-burgundy/20 rounded-full flex items-center justify-center mb-4 group-hover:bg-brand-gold group-hover:text-brand-dark transition-colors duration-300 text-brand-gold">
                 {service.icon}

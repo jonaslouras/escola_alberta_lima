@@ -10,7 +10,7 @@ const Contact: React.FC = () => {
   });
 
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success'>('idle');
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
   const validateForm = () => {
     const newErrors: { [key: string]: string } = {};
@@ -34,23 +34,45 @@ const Contact: React.FC = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitStatus('idle');
 
     if (validateForm()) {
-      // Simulate API call
-      console.log('Form submitted:', formData);
-      setSubmitStatus('success');
-      setFormData({
-        name: '',
-        email: '',
-        subject: 'Informações Gerais',
-        message: ''
-      });
+      setSubmitStatus('loading');
+      try {
+        const response = await fetch('https://formsubmit.co/ajax/escola.albertalima@gmail.com', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({
+            name: formData.name,
+            email: formData.email,
+            _subject: `[Site Alberta Lima] ${formData.subject}`,
+            message: formData.message,
+            _template: 'table'
+          })
+        });
 
-      // Reset success message after 5 seconds
-      setTimeout(() => setSubmitStatus('idle'), 5000);
+        if (response.ok) {
+          setSubmitStatus('success');
+          setFormData({
+            name: '',
+            email: '',
+            subject: 'Informações Gerais',
+            message: ''
+          });
+          setTimeout(() => setSubmitStatus('idle'), 5000);
+        } else {
+          setSubmitStatus('error');
+          setTimeout(() => setSubmitStatus('idle'), 5000);
+        }
+      } catch {
+        setSubmitStatus('error');
+        setTimeout(() => setSubmitStatus('idle'), 5000);
+      }
     }
   };
 
@@ -158,6 +180,13 @@ const Contact: React.FC = () => {
               </div>
             )}
 
+            {submitStatus === 'error' && (
+              <div className="mb-6 bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg flex items-center gap-2 animate-fade-in-up">
+                <AlertCircle className="w-5 h-5" />
+                <p>Erro ao enviar mensagem. Tente novamente ou contacte-nos pelo WhatsApp.</p>
+              </div>
+            )}
+
             <form className="space-y-4" onSubmit={handleSubmit} noValidate>
               <div>
                 <label className="block text-sm font-bold mb-2 uppercase tracking-wide">Nome *</label>
@@ -228,9 +257,10 @@ const Contact: React.FC = () => {
 
               <button
                 type="submit"
-                className="w-full bg-brand-burgundy text-white font-bold py-4 rounded-lg hover:bg-brand-gold hover:text-brand-dark transition-all duration-300"
+                disabled={submitStatus === 'loading'}
+                className={`w-full font-bold py-4 rounded-lg transition-all duration-300 ${submitStatus === 'loading' ? 'bg-gray-400 text-white cursor-not-allowed' : 'bg-brand-burgundy text-white hover:bg-brand-gold hover:text-brand-dark'}`}
               >
-                Enviar Mensagem
+                {submitStatus === 'loading' ? 'A enviar...' : 'Enviar Mensagem'}
               </button>
             </form>
           </div>
