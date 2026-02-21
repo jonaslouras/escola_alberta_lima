@@ -2,11 +2,6 @@ import React from 'react';
 
 const teachers = [
   {
-    name: "Filipa Coelho",
-    role: "Canto",
-    image: "https://image2url.com/r2/default/images/1770327390373-e18817c1-7ee8-4379-bd25-256223422893.jpg"
-  },
-  {
     name: "Sérgio Ramos",
     role: "Canto",
     image: "https://image2url.com/r2/default/images/1770327553004-94c006ac-53a7-461e-8551-962dd495c1da.blob"
