@@ -22,7 +22,7 @@ const Environment: React.FC = () => {
                             >
                                 {/* Poster Image */}
                                 <img
-                                    src="https://picsum.photos/id/452/1280/720"
+                                    src="/images/escola alberta lima.png"
                                     alt="Capa do vídeo institucional"
                                     className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-60 transition-opacity duration-500"
                                 />
